@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     font-family: var(--font);
     background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
-    /* background-image: url('https://bit.ly/3nFVqJh'); */
+    /* background-image: url('###'); */
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
@@ -83,6 +83,34 @@ body {
     color: var(--bgColor);
 }
 
+.moreOptiondiv {
+    text-align: center;
+}
+.moreOption {
+    color: #FFF;
+}
+
+@keyframes loading {
+    0% {
+      content: " .";
+    }
+    25% {
+      content: " . .";
+    }
+    50% {
+      content: " . . .";
+    }
+    75% {
+      content: " . . . .";
+    }
+  }
+  
+  .loadingAnimation::after {
+    content: " . . . .";
+    animation: loading 1s infinite;
+  }
+  
+
 #hashtag {
     position: relative;
     padding-bottom: 20px;
@@ -105,7 +133,7 @@ body {
 }
 
 
-/*-------------------------animations-----------------------*/
+/*-------------------------animations section-----------------------*/
 @keyframes transitionAnimation {
     0% {
         opacity: 0;
